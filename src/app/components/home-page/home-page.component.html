@@ -1,0 +1,26 @@
+<div>
+    <div class="flex justify-center items-center p-10">
+        <span class="text-transparent bg-clip-text text-lg sm:text-4xl bg-gradient-to-tr from-red-700 to-violet-700" style="font-family:cursive">
+            <ul>
+                <li>|| Vinaa Venkatesam Nanaadho Nanatha</li>
+                <li>Sadhaa Venkatesam Smaraami Smaraami ||</li>
+                <li>|| Hare Venkatesa Praseedha Praseedha</li>
+                <li>Priyam Venkatesa Prayaccha Prayaccha ||</li>
+            </ul>
+        </span>
+    </div>
+    
+    <div class="flex flex-col gap-10 justify-center m-5">
+        <ng-container *ngTemplateOutlet="dividingLine"></ng-container>
+        <app-main-god />
+        <ng-container *ngTemplateOutlet="dividingLine"></ng-container>
+        <app-secondary-gods />
+    </div>
+</div>
+
+<ng-template #dividingLine>
+    <div class="flex flex-col items-center h-12 bg-no-repeat">
+        <img class="w-[70vh]" src='../../../assets/mainPics/dividing_line.svg'>
+    </div>
+</ng-template>
+

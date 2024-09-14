@@ -1,0 +1,14 @@
+@let details = Details | async;
+
+<div class="flex justify-center items-center ml-[2vh] mr-[2vh]">
+    <img class="object-cover mt-[10vh] w-full h-[50vh] lg:h-[50vh] lg:w-[90vh] opacity-90 rounded-t-[50px]" src="../../../assets/mainPics/{{GodName|async}}.jpeg">
+</div>
+<div class="mt-0 lg:m-[10vh] lg:mt-[1vh] flex flex-col justify-center items-center">
+    <span class="text-[5vh] text-center">{{details?.Name}}</span>
+    <div class="flex flex-col items-center h-12 bg-no-repeat mb-[3vh]">
+        <img class="w-[70vh]" src='../../../assets/mainPics/dividing_line.svg'>
+    </div>
+    @for (para of details?.Content; track $index) {
+        <p class="m-[1vh] text-justify items-start">{{para}}</p>
+    }
+</div>

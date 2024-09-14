@@ -1,0 +1,18 @@
+@let ulClasses ="flex justify-center items-center w-[100%] lg:w-32 p-4 hover:text-amber-500 cursor-pointer hover:border-b-2 hover:border-b-amber-500";
+@let activeClasses = "border-b-2 border-b-amber-500";
+
+<div class="h-5 bg-repeat-x rotate-180" style="background-image: url('../../../../assets/mainPics/headerFlowers.svg'); background-size: 150px"></div>
+<nav class="w-full sm:flex sm:flex-row flex-col sm:justify-around justify-center items-center px-5 mt-5" style="font-family:Georgia, 'Times New Roman', Times, serif">
+    <div class="cursor-pointer flex justify-around">
+        <img class="max-w-[22vh] lg:min-w-[25vh]" [routerLink]="['home']"  src="../../../../assets/mainPics/logo.png">
+        <div class="text-6xl flex items-center sm:hidden" (click)="ToggleMenuBar(Menu)">{{menuIcon}}</div>
+    </div>
+    <div class="lg:flex hidden flex-col lg:flex-row bg-slate-95 text-xl rounded-md border border-slate-800 justify-center items-center m-5" #Menu>
+        <div (click)="ToggleMenuBar(Menu)" [class]="ulClasses" [routerLinkActive]="activeClasses" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['home']" class="w-32 rounded-l-md">Home</div>
+        <div (click)="ToggleMenuBar(Menu)" [class]="ulClasses" [routerLinkActive]="activeClasses" [routerLinkActiveOptions]="{exact: true}" [routerLink]="'media'">Media</div>
+        <div (click)="ToggleMenuBar(Menu)" [class]="ulClasses" [routerLinkActive]="activeClasses" [routerLinkActiveOptions]="{exact: true}" [routerLink]="'programs'">Programs</div>
+        <div (click)="ToggleMenuBar(Menu)" [class]="ulClasses" [routerLinkActive]="activeClasses" [routerLinkActiveOptions]="{exact: true}" [routerLink]="'about'">About</div>
+        <div (click)="ToggleMenuBar(Menu)" [class]="ulClasses" [routerLinkActive]="activeClasses" [routerLinkActiveOptions]="{exact: true}" [routerLink]="'contact'" class="w-32 rounded-r-md">Locate</div>
+    </div>
+</nav>
+

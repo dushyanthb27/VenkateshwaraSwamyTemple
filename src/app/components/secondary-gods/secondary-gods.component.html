@@ -1,0 +1,13 @@
+<div class="flex flex-col lg:flex-row gap-10 justify-center m-5">
+    <ng-container *ngTemplateOutlet="secondaryGod; context: {godName: 'Sri Ganapathi', picUrl: 'Ganapathi'}"/>
+    <ng-container *ngTemplateOutlet="secondaryGod; context: {godName: 'Sri Kashi Vishwanatha Swamy', picUrl: 'KashiVishwanathaSwamy'}"/>
+    <ng-container *ngTemplateOutlet="secondaryGod; context: {godName: 'Sri Poojambike', picUrl: 'Poojambike'}"/>
+</div>
+
+
+<ng-template #secondaryGod let-godName="godName" let-picUrl="picUrl">
+    <div class="bg-slate-900 h-[40vh] lg:w-[50vh] rounded-[50px] overflow-hidden">
+        <div [routerLink]="['/','know-about', picUrl]" class="cursor-pointer h-[35vh] lg:w-[50vh] bg-slate-900 rounded-t-[50px] flex items-end justify-center opacity-90 bg-cover hover:scale-105 transition duration-300 delay-150 hover:delay-300" style="background-image: url('../../../assets/mainPics/{{picUrl}}.jpeg');"></div>
+        <h1 class="text-lg sm:text-2xl text-center p-2">{{godName}}</h1>
+    </div>
+</ng-template>
