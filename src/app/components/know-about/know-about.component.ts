@@ -6,11 +6,10 @@ import { GodDetails } from '../../models/god-details';
 import { GodDetailsService } from '../../services/god-details.service';
 
 @Component({
-  selector: 'app-know-about',
-  standalone: true,
-  imports: [ AsyncPipe, JsonPipe],
-  templateUrl: './know-about.component.html',
-  styleUrl: './know-about.component.css'
+    selector: 'app-know-about',
+    imports: [AsyncPipe, JsonPipe],
+    templateUrl: './know-about.component.html',
+    styleUrl: './know-about.component.css'
 })
 export class KnowAboutComponent {
   activatedRoute = inject(ActivatedRoute);

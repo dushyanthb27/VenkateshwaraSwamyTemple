@@ -6,11 +6,10 @@ import { FooterComponent } from "./components/common/footer/footer.component";
 import { ViewportScroller } from '@angular/common';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, HeaderComponent, HomePageComponent, FooterComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    imports: [RouterOutlet, HeaderComponent, HomePageComponent, FooterComponent],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent {
   router = inject(Router);

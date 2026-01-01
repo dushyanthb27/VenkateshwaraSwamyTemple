@@ -3,11 +3,10 @@ import { Component, inject, Renderer2 } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [NgClass, RouterLink, RouterLinkActive],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+    selector: 'app-header',
+    imports: [NgClass, RouterLink, RouterLinkActive],
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.css'
 })
 export class HeaderComponent {
   renderer = inject(Renderer2);
